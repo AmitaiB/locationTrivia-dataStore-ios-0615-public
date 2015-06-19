@@ -50,7 +50,7 @@
                     <navigationItem key="navigationItem" id="18V-W7-rat">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PuT-mE-U89">
                             <connections>
-                                <segue destination="MSg-b3-pCw" kind="push" identifier="locationsToAddSegueID" id="0aX-NI-AVC"/>
+                                <segue destination="MSg-b3-pCw" kind="modal" identifier="locationsToAddSegueID" id="0aX-NI-AVC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -74,7 +74,18 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Imx-Xf-Era">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="tGG-ZI-sF1"/>
+                                    <navigationItem title="Title" id="tGG-ZI-sF1">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="XEf-c8-zSg">
+                                            <connections>
+                                                <action selector="cancelButtonTapped:" destination="MSg-b3-pCw" id="nEf-k4-7qg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YnT-L5-U7k">
+                                            <connections>
+                                                <action selector="doneButtonTapped:" destination="MSg-b3-pCw" id="Y0M-eX-MXF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Und-DX-sMv">
@@ -88,7 +99,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7Rs-Sa-gnl">
-                                <rect key="frame" x="16" y="142" width="288" height="30"/>
+                                <rect key="frame" x="16" y="130" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
@@ -99,6 +110,11 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ip2-6i-e1r"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="ahj-BV-uSI"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="latitudeTextField" destination="7Rs-Sa-gnl" id="Icc-19-9df"/>
+                        <outlet property="longitudeTextField" destination="bXe-z9-OeS" id="1MO-GP-BGr"/>
+                        <outlet property="nameTextField" destination="Und-DX-sMv" id="HLx-oR-4BL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4g-Pw-n4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
