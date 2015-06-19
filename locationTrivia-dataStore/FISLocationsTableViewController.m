@@ -74,6 +74,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -147,15 +153,14 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
     NSIndexPath *ip = [self.tableView indexPathForSelectedRow];
     FISLocation *location = self.locationsDataManager.locations[ip.row];
-
-    if ([segue.identifier isEqualToString: @"segueToTriviaTableVC"]) {
+    
+    if ([segue.identifier isEqualToString: @"locationsToTrviaTableSegueID"]) {
         FISTriviaTableViewController *triviaVC = segue.destinationViewController;
         triviaVC.trivia = location.trivia;
     }
-}
-
 
 //- (void)prepareForSegueToAddLocationVC:(UIStoryboardSegue *)segue sender:(id)sender
 //{

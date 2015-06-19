@@ -38,7 +38,11 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+<<<<<<< HEAD
                                     <segue destination="tUP-So-DAg" kind="push" identifier="segueToTriviaTableVC" id="cYc-qr-cPS"/>
+=======
+                                    <segue destination="tUP-So-DAg" kind="push" identifier="locationsToTrviaTableSegueID" id="cYc-qr-cPS"/>
+>>>>>>> reboot
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -50,7 +54,11 @@
                     <navigationItem key="navigationItem" id="18V-W7-rat">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PuT-mE-U89">
                             <connections>
+<<<<<<< HEAD
                                 <segue destination="YTU-dP-ilT" kind="push" identifier="segueToAddVC" id="U4w-AZ-01o"/>
+=======
+                                <segue destination="MSg-b3-pCw" kind="modal" identifier="locationsToAddSegueID" id="0aX-NI-AVC"/>
+>>>>>>> reboot
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -58,6 +66,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A96-Xg-9cB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="588" y="68"/>
+        </scene>
+        <!--Add Location View Controller-->
+        <scene sceneID="UNJ-Nt-1TB">
+            <objects>
+                <viewController id="MSg-b3-pCw" customClass="FISAddLocationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fgP-6R-l4s"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mq2-xM-iDd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FrR-9q-VgV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Imx-Xf-Era">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="tGG-ZI-sF1">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="XEf-c8-zSg">
+                                            <connections>
+                                                <action selector="cancelButtonTapped:" destination="MSg-b3-pCw" id="nEf-k4-7qg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YnT-L5-U7k">
+                                            <connections>
+                                                <action selector="doneButtonTapped:" destination="MSg-b3-pCw" id="Y0M-eX-MXF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Und-DX-sMv">
+                                <rect key="frame" x="16" y="86" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bXe-z9-OeS">
+                                <rect key="frame" x="16" y="180" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7Rs-Sa-gnl">
+                                <rect key="frame" x="16" y="130" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jTz-I7-5rP">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ip2-6i-e1r"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ahj-BV-uSI"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="latitudeTextField" destination="7Rs-Sa-gnl" id="Icc-19-9df"/>
+                        <outlet property="longitudeTextField" destination="bXe-z9-OeS" id="1MO-GP-BGr"/>
+                        <outlet property="nameTextField" destination="Und-DX-sMv" id="HLx-oR-4BL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4g-Pw-n4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="80"/>
         </scene>
         <!--Trivia Table View Controller-->
         <scene sceneID="qct-6z-LeM">
@@ -95,6 +164,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlz-wJ-WHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1349" y="80"/>
         </scene>
         <!--Add Location-->
@@ -172,6 +242,9 @@
                 <barButtonItem title="Item" id="h1L-El-RAH"/>
             </objects>
             <point key="canvasLocation" x="1013" y="-202"/>
+=======
+            <point key="canvasLocation" x="634" y="747"/>
+>>>>>>> reboot
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r3w-FL-X3v">
