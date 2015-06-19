@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FISLocationsDataManager.h"
+
 
 @interface FISAddLocationViewController : UIViewController
+
+@property (nonatomic, strong) FISLocationsDataManager *locations;
 
 @end
