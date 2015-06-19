@@ -146,13 +146,14 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-
+    
     NSIndexPath *ip = [self.tableView indexPathForSelectedRow];
     FISLocation *location = self.locationsDataManager.locations[ip.row];
-
-    FISTriviaTableViewController *triviaVC = segue.destinationViewController;
-
-    triviaVC.trivia = location.trivia;
+    
+    if ([segue.identifier isEqualToString: @"locationsToTrviaTableSegueID"]) {
+        FISTriviaTableViewController *triviaVC = segue.destinationViewController;
+        triviaVC.trivia = location.trivia;
+    }
 
 }
 
