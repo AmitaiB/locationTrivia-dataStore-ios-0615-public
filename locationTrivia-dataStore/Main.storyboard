@@ -110,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tNy-wJ-Yz7">
-                                <rect key="frame" x="32" y="209" width="251" height="30"/>
+                                <rect key="frame" x="32" y="114" width="251" height="30"/>
                                 <accessibility key="accessibilityConfiguration" label="Add latitude"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
@@ -119,18 +119,8 @@
                                     <outlet property="delegate" destination="tTy-Fu-psc" id="L1x-bT-G5E"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pmJ-by-cva">
-                                <rect key="frame" x="32" y="305" width="251" height="30"/>
-                                <accessibility key="accessibilityConfiguration" label="Add longitude"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <action selector="saveNewLocation:" destination="YTU-dP-ilT" eventType="editingDidEnd" id="IQL-yV-6fl"/>
-                                    <outlet property="delegate" destination="tTy-Fu-psc" id="xol-LV-lJl"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Ha-E2-RKD">
-                                <rect key="frame" x="32" y="136" width="251" height="30"/>
+                                <rect key="frame" x="32" y="63" width="251" height="30"/>
                                 <accessibility key="accessibilityConfiguration" label="Add name">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -156,6 +146,16 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pmJ-by-cva">
+                                <rect key="frame" x="32" y="160" width="251" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Add longitude"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="saveNewLocation:" destination="YTU-dP-ilT" eventType="editingDidEnd" id="IQL-yV-6fl"/>
+                                    <outlet property="delegate" destination="tTy-Fu-psc" id="xol-LV-lJl"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
