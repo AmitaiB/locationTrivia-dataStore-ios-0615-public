@@ -8,6 +8,7 @@
 #import "FISLocation.h"
 #import "FISLocationsTableViewController.h"
 #import "FISTriviaTableViewController.h"
+#import "FISAddLocationViewController.h"
 
 @interface FISLocationsTableViewController ()
 
@@ -146,14 +147,28 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-
     NSIndexPath *ip = [self.tableView indexPathForSelectedRow];
     FISLocation *location = self.locationsDataManager.locations[ip.row];
 
-    FISTriviaTableViewController *triviaVC = segue.destinationViewController;
-
-    triviaVC.trivia = location.trivia;
-
+    if ([segue.identifier isEqualToString: @"segueToTriviaTableVC"]) {
+        FISTriviaTableViewController *triviaVC = segue.destinationViewController;
+        triviaVC.trivia = location.trivia;
+    }
 }
+
+
+//- (void)prepareForSegueToAddLocationVC:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//    
+//    NSIndexPath *ip = [self.tableView indexPathForSelectedRow];
+////    FISLocation *location = self.locationsDataManager.locations[ip.row];
+//    
+//    FISAddLocationViewController *addLocationVC = segue.destinationViewController;
+//    
+//    
+//    
+//}
 
 @end

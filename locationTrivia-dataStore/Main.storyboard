@@ -38,7 +38,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="tUP-So-DAg" kind="push" id="cYc-qr-cPS"/>
+                                    <segue destination="tUP-So-DAg" kind="push" identifier="segueToTriviaTableVC" id="cYc-qr-cPS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -50,7 +50,7 @@
                     <navigationItem key="navigationItem" id="18V-W7-rat">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PuT-mE-U89">
                             <connections>
-                                <segue destination="YTU-dP-ilT" kind="push" id="U4w-AZ-01o"/>
+                                <segue destination="YTU-dP-ilT" kind="push" identifier="segueToAddVC" id="U4w-AZ-01o"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -97,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="1349" y="80"/>
         </scene>
-        <!--Add Location View Controller-->
+        <!--Add Location-->
         <scene sceneID="Hhm-g3-Bc7">
             <objects>
                 <viewController id="YTU-dP-ilT" customClass="FISAddLocationViewController" sceneMemberID="viewController">
@@ -111,16 +111,21 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ha-E2-RKD">
                                 <rect key="frame" x="32" y="136" width="251" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="addNameField">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tNy-wJ-Yz7">
                                 <rect key="frame" x="32" y="209" width="251" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="addLatitudeField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmJ-by-cva">
                                 <rect key="frame" x="32" y="305" width="251" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="addLongitudeField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -130,12 +135,12 @@
                     <toolbarItems>
                         <barButtonItem systemItem="save" id="tTy-Fu-psc"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="aA8-Fc-Tyz"/>
+                    <navigationItem key="navigationItem" title="Add Location" id="aA8-Fc-Tyz"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIq-P1-FDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960" y="-47"/>
+            <point key="canvasLocation" x="1005" y="-153"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r3w-FL-X3v">
