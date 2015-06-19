@@ -56,11 +56,12 @@
 //
 //}
 - (IBAction)saveNewLocation:(id)sender {
-    NSString *newName = UITextFieldTextDidEndEditingNotification;
-    NSNumber *newLat = [NSNumber numberWithFloat: [UITextFieldTextDidEndEditingNotification floatValue]];
-    NSNumber *newLong = [NSNumber numberWithFloat:[UITextFieldTextDidEndEditingNotification floatValue]];
-    FISLocation *newLocationToSave = [[FISLocation alloc] initWithName:newName latitude:newLat longitude:newLong];
-    FISLocationsDataManager *listOf = [[FISLocationsDataManager alloc] init];
-    [listOf.locations addObject:newLocationToSave];
+    NSString *newName = self.nameTextField.text;
+    NSNumber *newLatitude = @([self.latitudeTextField.text integerValue]);
+    NSNumber *newLongitude = @([self.longitudeTextField.text integerValue]);
+    
+    FISLocation *newLocationToSave = [[FISLocation alloc] initWithName:newName latitude:newLatitude longitude:newLongitude];
+    FISLocationsDataManager *dataManager = [FISLocationsDataManager sharedLocationsDataManager];
+    [dataManager.locations addObject:newLocationToSave];
 }
 @end

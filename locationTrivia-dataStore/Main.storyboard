@@ -142,17 +142,24 @@
                                     <outlet property="delegate" destination="tTy-Fu-psc" id="oAY-VO-BZ8"/>
                                 </connections>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="juP-2m-bPd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="b26-Zc-a4g">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="tTy-Fu-psc">
+                                            <connections>
+                                                <action selector="saveNewLocation:" destination="YTU-dP-ilT" id="0Os-cc-Nnd"/>
+                                                <segue destination="Cmu-ZO-bCa" kind="push" identifier="segueAfterSave" id="Gwh-6U-Wow"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="FwM-kw-DvO"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem systemItem="save" id="tTy-Fu-psc">
-                            <connections>
-                                <action selector="saveNewLocation:" destination="YTU-dP-ilT" id="0Os-cc-Nnd"/>
-                                <segue destination="Cmu-ZO-bCa" kind="push" identifier="segueAfterSave" id="Gwh-6U-Wow"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add Location" id="aA8-Fc-Tyz"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -162,6 +169,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIq-P1-FDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem title="Item" id="h1L-El-RAH"/>
             </objects>
             <point key="canvasLocation" x="1013" y="-202"/>
         </scene>
